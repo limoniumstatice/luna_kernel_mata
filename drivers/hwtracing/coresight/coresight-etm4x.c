@@ -2206,17 +2206,17 @@ static ssize_t name##_show(struct device *_dev,				\
 }									\
 static DEVICE_ATTR_RO(name)
 
-coresight_simple_func(trcoslsr, TRCOSLSR);
-coresight_simple_func(trcpdcr, TRCPDCR);
-coresight_simple_func(trcpdsr, TRCPDSR);
-coresight_simple_func(trclsr, TRCLSR);
-coresight_simple_func(trcauthstatus, TRCAUTHSTATUS);
-coresight_simple_func(trcdevid, TRCDEVID);
-coresight_simple_func(trcdevtype, TRCDEVTYPE);
-coresight_simple_func(trcpidr0, TRCPIDR0);
-coresight_simple_func(trcpidr1, TRCPIDR1);
-coresight_simple_func(trcpidr2, TRCPIDR2);
-coresight_simple_func(trcpidr3, TRCPIDR3);
+coresight_cross_read(trcoslsr, TRCOSLSR);
+coresight_cross_read(trcpdcr, TRCPDCR);
+coresight_cross_read(trcpdsr, TRCPDSR);
+coresight_cross_read(trclsr, TRCLSR);
+coresight_cross_read(trcauthstatus, TRCAUTHSTATUS);
+coresight_cross_read(trcdevid, TRCDEVID);
+coresight_cross_read(trcdevtype, TRCDEVTYPE);
+coresight_cross_read(trcpidr0, TRCPIDR0);
+coresight_cross_read(trcpidr1, TRCPIDR1);
+coresight_cross_read(trcpidr2, TRCPIDR2);
+coresight_cross_read(trcpidr3, TRCPIDR3);
 
 static struct attribute *coresight_etmv4_mgmt_attrs[] = {
 	&dev_attr_trcoslsr.attr,
